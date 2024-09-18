@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USER_URL = "http://localhost:8083/user";
+const USER_URL = "http://54.163.17.203:8083/user";
 
 export const login = (credentials) => {
   const params = {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const SHIFT_URL = "http://localhost:8082";
+const SHIFT_URL = "http://54.163.17.203:8082";
 
 export const getShift = (userId) => {
   const token = localStorage.getItem('token');
