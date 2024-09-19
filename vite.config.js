@@ -1,14 +1,16 @@
-import { defineConfig, loadEnv } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
   // eslint-disable-next-line no-undef
-  const env = loadEnv(mode, process.cwd(), "");
+  const env = loadEnv(mode, process.cwd(), '');
   return {
     // vite config
     plugins: [react()],
     server: {
       port: 3000, // Set the port to 3000
+      host: '0.0.0.0',
+      open: true,
 
       // proxy: {
       //   // Proxy /api requests to http://localhost:5000
@@ -20,9 +22,9 @@ export default defineConfig(({ mode }) => {
       // },
 
       cors: {
-        origin: ["*", env.VITE_API_URL], // Allow requests from these origins only
-        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // HTTP methods allowed
-        allowedHeaders: ["Content-Type", "Authorization"], // Headers allowed in requests
+        origin: ['*', env.VITE_API_URL], // Allow requests from these origins only
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // HTTP methods allowed
+        allowedHeaders: ['Content-Type', 'Authorization'], // Headers allowed in requests
         credentials: true, // Allow credentials (cookies, authorization headers)
       },
     },

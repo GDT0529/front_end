@@ -41,7 +41,7 @@ export function Sidebar() {
         </div>
         <div className="ml-4">
           <h4 className="font-medium">Hi User</h4>
-          <a href="#" className="text-sm text-blue-500">
+          <a href="/info/info-bar" className="text-sm text-blue-500">
             View My Info
           </a>
         </div>
